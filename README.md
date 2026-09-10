@@ -1,5 +1,7 @@
 # **AG18261 - 7AAVDH26 - Semantic Spaces in Breaking Bad**
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WGShhxDVzdUTqFe7ZMo6xALNJq8DlEvO#scrollTo=0v8bSbX4BhQN)
+
 ## **Project Overview**
 
 This project applies Distributional Semantics to television transcripts to examine the socio-linguistic divergence between Breaking Bad’s two protagonists: Walter White and Jesse Pinkman. By computationally modeling their dialogue, the study investigates how distinct class backgrounds shape their conceptualizations of the drug trade and capital.
