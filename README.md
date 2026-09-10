@@ -1,18 +1,19 @@
-# 7AAVDH26 Final Project: Semantic Spaces in Breaking Bad
+# **AG18261 - 7AAVDH26 - Semantic Spaces in Breaking Bad**
 
-**Author:** AG18261
-**Module:** 7AAVDH26 Advanced Computational Analysis for Digital Humanities, Cultural and Social Research
+## **Project Overview**
 
-## Project Overview
-This repository contains the code and dataset for a diachronic and character-based text analysis of the television series *Breaking Bad*. The project applies Distributional Semantics to explore how the core vocabulary of the illicit drug trade and interpersonal relationships structurally differs between the show's two protagonists: Walter White (middle-class chemist) and Jesse Pinkman (marginalized street youth). 
+This project applies Distributional Semantics to television transcripts to examine the socio-linguistic divergence between Breaking Bad’s two protagonists: Walter White and Jesse Pinkman. By computationally modeling their dialogue, the study investigates how distinct class backgrounds shape their conceptualizations of the drug trade and capital.
 
-## Research Questions
-1. **RQ1:** How do the semantic networks surrounding core trade terminology (e.g., "business", "cook") structurally differ in the linguistic spaces of Walter and Jesse? To what extent do these semantic shifts reflect their distinct class attributes and professional conceptualizations?
-2. **RQ2:** Utilizing Orthogonal Procrustes alignment, what is the Euclidean distance of the concept of "money" between the two characters' embedding models? How does quantifying this divergence reveal their differing moral frameworks regarding survival versus the pursuit of absolute power?
+### **Research Questions**
+1. How do the semantic networks of core occupational terms (e.g., "business", "cook") differ between Walter and Jesse, and to what extent do these structural shifts reflect their distinct class identities?
+2. Using Orthogonal Procrustes alignment, what is the semantic distance of the concept of "money" between the two characters' embedding models, and how do their semantic neighborhoods reveal contrasting moral motivations?
 
-## Methodology
-The computational methodology strictly follows the techniques taught in the 7AAVDH26 module:
-* **NLP Pipeline:** Tokenization, custom stopword removal, and lemmatization using `spaCy`.
-* **Distributional Semantics:** Training independent `Word2Vec` neural word embedding models for each character using `gensim`.
-* **Space Alignment:** Applying `scipy`'s Orthogonal Procrustes algorithm to align Jesse's semantic matrix to Walter's coordinate space for direct comparison.
-* **Change Measurement & Visualization:** Calculating semantic shift magnitudes (Cosine Similarity) and Euclidean distances, followed by PCA dimensionality reduction to plot semantic trajectories.
+### **Methodology**
+The computational pipeline adapts techniques from the 7AAVDH26 module. Raw dialogue was pre-processed and lemmatized using spaCy, followed by the training of independent Word2Vec models. To accommodate small-scale spoken dialogue, hyperparameters were manually tuned. The two semantic spaces were then mapped into a shared coordinate system using Orthogonal Procrustes alignment, with trajectories and neighborhoods visualized via PCA (assisted by the adjustText library to resolve label overlap).
+
+## **Data Source**
+Breaking Bad Script directly scrapped from Forever Dreaming. The data has about 5596 dialogs (observations) in total with 5 variables which are: - actor - text (which is the dialog itself) - season - episode - title of the episode.
+
+**Link:** https://www.kaggle.com/datasets/mexwell/breakingbad-script
+
+**Important information:** If you are a fan then you would know that the series has a total of 5 seasons. Unfortunately, the transcripts data available online has labels attached to each dialog until episode 6 of season 3.
